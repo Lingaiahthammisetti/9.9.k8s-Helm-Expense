@@ -18,27 +18,27 @@ spec:
 #below is pod definition
   template:
     metadata:
-     labels:
-       component: frontend
-       project: expense
-       tier: web
+      labels:
+        component: frontend
+        project: expense
+        tier: web
     spec:
-       containers:
-       - name: frontend
-         image: joindevops/frontend:{{ .Values.deployment.imageVersion }}  #lingadevops/frontend:v1.0
-         volumeMounts:
-         - name: nginx-conf
-           mountPath: /etc/nginx/nginx.conf
-           subPath: nginx.conf
-           readOnly: true
+      containers:
+      - name: frontend
+        image: joindevops/frontend:{{ .Values.deployment.imageVersion }}  #lingadevops/frontend:v1.0
+        volumeMounts:
+        - name: nginx-conf
+          mountPath: /etc/nginx/nginx.conf
+          subPath: nginx.conf
+          readOnly: true
          # envFrom:
          #- configMapRef
          #  name: frontend
-      volumes:
-      - name: nginx-conf
-        configMap:
-          name: frontnd
-          items:
-          - key: nginx.conf
-            path: nginx.conf
+    volumes:
+    - name: nginx-conf
+      configMap:
+        name: frontnd
+        items:
+        - key: nginx.conf
+          path: nginx.conf
    
