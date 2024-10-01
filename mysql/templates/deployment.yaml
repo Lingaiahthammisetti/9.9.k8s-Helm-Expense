@@ -23,6 +23,6 @@ spec:
         project: expense
         tier: db
     spec:
-       containers:
-       - name: mysql
-         image: joindevops/mysql:{{ .Values.deployment.imageVersion }} # Please use your own image here. lingadevops/mysql:v1.0    
+      containers:
+      - name: mysql
+        image: joindevops/mysql:{{ .Values.deployment.imageVersion }} # Please use your own image here. lingadevops/mysql:v1.0    
