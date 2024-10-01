@@ -18,14 +18,14 @@ spec:
 #below is pod definition
   template:
     metadata:
-     labels:
-       component: backend
-       project: expense
-       tier: app
+      labels:
+        component: backend
+        project: expense
+        tier: app
     spec:
        containers:
        - name: mysql
-         image: joindevops/backend:{{ .Values.deployment.ImageVersion }} # Please use your own image here. lingadevops/mysql:v1.0 
+         image: joindevops/backend:{{ .Values.deployment.imageVersion }} # Please use your own image here. lingadevops/mysql:v1.0 
          envFrom:
          - configMapRef:
              name: backend   
