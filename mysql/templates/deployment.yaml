@@ -18,10 +18,10 @@ spec:
 #below is pod definition
   template:
     metadata:
-     labels:
-       component: mysql
-       project: expense
-       tier: db
+      labels:
+        component: mysql
+        project: expense
+        tier: db
     spec:
        containers:
        - name: mysql
