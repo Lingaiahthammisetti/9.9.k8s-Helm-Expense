@@ -1,5 +1,5 @@
 configmap:
   port: 8080
 deployment:
-  imageVersion: v1.0
+  imageVersion: v1.1
   replicas: 3
