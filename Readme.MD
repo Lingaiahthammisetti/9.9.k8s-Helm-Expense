@@ -20,3 +20,12 @@ a6e42898bef734110ae2c99386b5296a-292488674.us-east-1.elb.amazonaws.com
 
 kubectl delete all --all 
 
+
+
+```
+kubectl apply -f namespace.yaml
+cd mysql && helm install mysql .
+cd ../backend && helm install backend .
+cd ../frontend && helm install frontend .
+
+```
